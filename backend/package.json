@@ -1,0 +1,45 @@
+{
+  "name": "bright-sol-advisor-backend",
+  "version": "1.0.0",
+  "description": "Backend API for BrightSol Advisor - Solar Energy Calculator and Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "echo 'No build step needed for Node.js backend'",
+    "test": "jest"
+  },
+  "keywords": [
+    "solar",
+    "energy",
+    "calculator",
+    "MNRE",
+    "subsidy",
+    "rooftop",
+    "renewable"
+  ],
+  "author": "BrightSol Advisor Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.6.0",
+    "pdf-parse": "^1.1.1",
+    "multer": "^1.4.5-lts.1",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "dotenv": "^16.3.1",
+    "morgan": "^1.10.0",
+    "compression": "^1.7.4",
+    "node-cache": "^5.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

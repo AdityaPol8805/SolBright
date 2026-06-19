@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f5ff;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.container {
+  width: 450px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #cccccc;
+}
+
+h1 {
+  text-align: center;
+  color: #333333;
+}
+
+.mode-select {
+  margin-bottom: 15px;
+}
+
+/* Fix 3: hide month inputs via CSS instead of inline style */
+#month-inputs {
+  display: none;
+}
+
+#day-inputs,
+#month-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 0.95rem;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #0057ff;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background: #003fcc;
+}
+
+pre {
+  background: #eeeeee;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 10px;
+  max-height: 250px;
+  overflow: auto;
+}

@@ -1,0 +1,26 @@
+# Python virtual environments
+Lib/
+Scripts/
+Include/
+Shadow/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Datasets and training data
+train/images/
+valid/images/
+test/
+images/
+masks/
+
+# ML outputs
+checkpoints/
+pred_outlines/
+
+# Node
+node_modules/
+.next/

@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Modern color palette with vibrant solar-themed colors */
+    --background: 210 50% 98%;
+    --foreground: 220 40% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 40% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 40% 12%;
+    --primary: 210 100% 35%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 30 100% 50%;
+    --secondary-foreground: 220 40% 12%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 20% 45%;
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%;
+    --radius: 0.6rem;
+    --chart-1: 221 83% 53%;
+    --chart-2: 173 58% 45%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 90% 66%;
+    --chart-5: 27 95% 67%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 30 100% 50%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 25 95% 53%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 224 76% 48%;
+    --chart-1: 220 76% 60%;
+    --chart-2: 160 84% 45%;
+    --chart-3: 30 100% 60%;
+    --chart-4: 280 85% 70%;
+    --chart-5: 340 90% 65%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    scroll-behavior: smooth;
+  }
+}
+
+/* Advanced styling for UI components */
+@layer components {
+  /* Card hover effects */
+  .card-hover {
+    transition-property: all;
+    transition-duration: 300ms;
+    border-color: transparent;
+  }
+
+  .card-hover:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); /* hover:shadow-lg */
+    transform: translateY(-4px); /* hover:translate-y-[-4px] */
+    border-color: hsla(var(--primary), 0.2); /* hover:border-primary/20 */
+  }
+  
+  /* Glass morphism effect */
+  .glass {
+    background-color: rgba(255, 255, 255, 0.1); /* bg-white/10 */
+    backdrop-filter: blur(12px); /* backdrop-blur-md */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* border border-white/20 */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); /* shadow-lg */
+  }
+  
+  /* Solar-themed gradient backgrounds */
+  .solar-gradient-primary {
+    background-image: linear-gradient(to right, hsl(var(--primary)), #3b82f6); /* bg-gradient-to-r from-primary to-blue-600 */
+  }
+  
+  .solar-gradient-accent {
+    background-image: linear-gradient(to right, hsl(var(--secondary)), hsl(var(--accent))); /* bg-gradient-to-r from-secondary to-accent */
+  }
+  
+  /* Animated glow effects */
+  .solar-glow {
+    box-shadow: 0 0 25px rgba(var(--secondary) / 0.5);
+    animation: pulse 5s infinite alternate;
+  }
+  
+  /* Modern button styles */
+  .btn-modern {
+    border-radius: 9999px; /* rounded-full */
+    padding: 0.75rem 1.5rem; /* py-3 px-6 */
+    font-weight: 500; /* font-medium */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* shadow-md */
+    transition-property: all;
+    transition-duration: 300ms;
+  }
+
+  .btn-modern:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); /* hover:shadow-lg */
+  }
+
+  .btn-modern:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px hsl(var(--ring)), 0 0 0 4px rgba(255, 255, 255, 0.8); /* focus:ring-2 focus:ring-offset-2 */
+  }
+}
+
+/* Custom animations */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px rgba(var(--secondary) / 0.4);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(var(--secondary) / 0.7);
+  }
+}
+/* Solar panel grid pattern */
+.solar-pattern {
+  background-image: linear-gradient(rgba(var(--primary) / 0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(var(--primary) / 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
